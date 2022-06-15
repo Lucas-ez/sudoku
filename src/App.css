@@ -1,38 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
   display: flex;
+
   flex-direction: column;
   align-items: center;
+}
+
+.Board {
+  margin-top: 100px;
+}
+
+.Row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.Cell {
+  border: 2px solid rgba(0, 0, 0, 0.262);
+  
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  background-color: rgb(255, 255, 255);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.llena {
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(91, 181, 83);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(5, 0fr);
+  gap: 15px;
+  justify-content: center;
+  
+  width: 500px;
+  margin-top: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Buttom {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(219, 228, 230);
+
+  width: 55px;
+  height: 70px;
+  border-radius: 10%;
+  font-size: 24px;
+
+  transition: background-color 0.5s;
+}
+
+.Buttom:hover {
+  background-color: rgb(187, 201, 204);
+  cursor: pointer;
 }
