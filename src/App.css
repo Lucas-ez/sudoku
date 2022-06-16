@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -17,7 +21,7 @@
 .Row {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
 }
@@ -25,9 +29,9 @@
 .Cell {
   border: 2px solid rgba(0, 0, 0, 0.262);
   
-  width: 50px;
-  height: 50px;
-  margin: 2px;
+  width: 60px;
+  height: 60px;
+  margin: 3px;
   background-color: rgb(255, 255, 255);
 
   display: flex;
@@ -37,7 +41,7 @@
 
 .llena {
   border: 2px solid rgb(255, 255, 255);
-  background-color: rgb(91, 181, 83);
+  background-color: rgb(118, 202, 110);
   color: white;
 }
 
@@ -51,7 +55,7 @@
   margin-top: 50px;
 }
 
-.Buttom {
+.Button {
 
   display: flex;
   justify-content: center;
@@ -64,10 +68,25 @@
   border-radius: 10%;
   font-size: 24px;
 
-  transition: background-color 0.5s;
+  transition: background-color 0.4s;
 }
 
-.Buttom:hover {
+.Button:hover {
   background-color: rgb(187, 201, 204);
   cursor: pointer;
+}
+
+.wrong {
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(226, 67, 67);
+  color: white
+}
+
+.focused {
+  border-radius: 4%;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.value-focused {
+  background-color: rgb(69, 135, 63);
 }
