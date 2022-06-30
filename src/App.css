@@ -115,3 +115,31 @@
   background-color: rgb(69, 135, 63);
   border-color: rgb(69, 135, 63);
 }
+
+/* media query menor a 650px */
+
+  @media screen and (max-width: 650px) {
+    
+    .App {
+      font-size: 24px;
+    }
+
+    .Cell {
+      width: 32px;
+      height: 32px;
+    }
+
+    .Row:nth-child(3n) {
+      margin-bottom: 13px;
+    }
+
+    .Cell:nth-child(3n) {
+      margin-right: 13px;
+    }
+
+    .info {
+      margin-right: 10px;
+      width: 343px;
+      font-size: 20px;
+    }
+  }
