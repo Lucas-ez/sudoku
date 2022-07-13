@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+:root {
+  --green: rgb(118, 202, 110);
+  --purple: rgb(184, 121, 237);
+  --primary-color: rgb(118, 202, 110);
+}
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -9,10 +17,11 @@
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
   display: flex;
-
+  
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 
 .info {
@@ -20,7 +29,7 @@
   margin-right: 15px;
   width: 610px;
   font-size: 42px;
-
+  
   display: flex;
   justify-content: space-between;
 }
@@ -47,12 +56,11 @@
   border: 2px solid rgba(0, 0, 0, 0.262);
   width: 60px;
   height: 60px;
-  background-color: rgb(255, 255, 255);
   
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   user-select: none;
   margin: 2px;
 }
@@ -66,8 +74,8 @@
 }
 
 .llena {
-  border: 2px solid rgb(118, 202, 110);
-  background-color: rgb(118, 202, 110);
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
   color: white;
 }
 
@@ -82,27 +90,27 @@
 }
 
 .Button {
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
-  background-color: rgb(203, 217, 220);
+  background-color: rgb(185, 199, 202);
   width: 55px;
   height: 70px;
   border-radius: 10%;
   font-size: 28px;
-
+  
   transition: background-color 0.4s;
 }
 
 .Button:hover {
-  background-color: rgb(187, 201, 204);
+  background-color: rgb(158, 170, 173);
   cursor: pointer;
 }
 
 .wrong {
-  background-color: rgb(226, 67, 67);
+  background-color: rgb(207, 61, 61);
   color: white
 }
 
@@ -112,34 +120,80 @@
 }
 
 .value-focused {
-  background-color: rgb(69, 135, 63);
-  border-color: rgb(69, 135, 63);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  filter: brightness(70%);
 }
 
 /* media query menor a 650px */
 
-  @media screen and (max-width: 650px) {
-    
-    .App {
-      font-size: 24px;
-    }
-
-    .Cell {
-      width: 32px;
-      height: 32px;
-    }
-
-    .Row:nth-child(3n) {
-      margin-bottom: 13px;
-    }
-
-    .Cell:nth-child(3n) {
-      margin-right: 13px;
-    }
-
-    .info {
-      margin-right: 10px;
-      width: 343px;
-      font-size: 20px;
-    }
+@media screen and (max-width: 650px) {
+  
+  .App {
+    font-size: 24px;
   }
+  
+  .Cell {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .Row:nth-child(3n) {
+    margin-bottom: 13px;
+  }
+  
+  .Cell:nth-child(3n) {
+    margin-right: 13px;
+  }
+  
+  .info {
+    margin-right: 10px;
+    width: 343px;
+    font-size: 20px;
+  }
+}
+
+/* MODO OSCURO */
+
+.dark-button {
+  margin-bottom: 10px;
+  border-radius: 50%;
+  padding: 5px;
+
+  color: black;
+  border: 2px solid black;
+  user-select: none;
+}
+
+.dark-mode .dark-button {
+  color: white;
+  border: 2px solid white;
+}
+
+.dark-mode {
+  background-color: rgb(48, 48, 48);
+  --primary-color: var(--purple);
+} 
+
+.dark-mode .Cell {
+  border: 2px solid rgba(214, 214, 214, 0.262);
+}
+
+.dark-mode .focused {
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.dark-mode .timer {
+  color: rgba(225, 225, 225, 0.712);
+}
+
+.dark-mode .Button {
+  background-color: rgb(101, 101, 101);
+  color: white;
+}
+
+.dark-mode .Button:hover {
+  background-color: rgb(126, 118, 133);
+}
+
+/* fin MODO OSCURO */

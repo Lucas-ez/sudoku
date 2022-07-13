@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Board from './components/Board';
 import Button from './components/Button';
+import {FaMoon} from 'react-icons/fa';
 
 const resuelto = [[5,3,4,6,7,8,9,1,2],
                   [6,7,2,1,9,5,3,4,8],
@@ -42,6 +43,8 @@ function App() {
   const [timer, setTimer] = useState(0);
   const [win, setWin] = useState(false);
   const [errores, setErrores] = useState(0);
+
+  const [darkMode, setDarkMode] = useState(false);
 
   const selectCell = ([i, j]) => {
     if(win)
@@ -97,7 +100,8 @@ function App() {
   }, [board, win]);
   
   return (
-    <div className="App">
+    <div className={"App" + (darkMode?" dark-mode":"")}>
+      <FaMoon className='dark-button' onClick={() => setDarkMode(!darkMode)}/>
       <div className='info'>
         <span className='timer'>
           <span>{(timer>3600)?Math.floor(timer/3600)+":":""}</span>
