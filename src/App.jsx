@@ -101,8 +101,8 @@ function App() {
   
   return (
     <div className={"App" + (darkMode?" dark-mode":"")}>
-      <FaMoon className='dark-button' onClick={() => setDarkMode(!darkMode)}/>
       <div className='info'>
+        <FaMoon className='dark-button' onClick={() => setDarkMode(!darkMode)}/>
         <span className='timer'>
           <span>{(timer>3600)?Math.floor(timer/3600)+":":""}</span>
           <span>{("0" + (Math.floor(timer/60))%60).slice(-2)}:</span>

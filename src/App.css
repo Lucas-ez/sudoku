@@ -25,10 +25,10 @@
 }
 
 .info {
-  margin-bottom: 15px;
-  margin-right: 15px;
-  width: 610px;
-  font-size: 42px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 400px;
+  font-size: 36px;
   
   display: flex;
   justify-content: space-between;
@@ -54,8 +54,8 @@
 
 .Cell {
   border: 2px solid rgba(0, 0, 0, 0.262);
-  width: 60px;
-  height: 60px;
+  width: 2.8vw;
+  height: 2.8vw;
   
   display: flex;
   align-items: center;
@@ -125,6 +125,35 @@
   filter: brightness(70%);
 }
 
+
+/* media query menor a 1200px */
+
+@media screen and (max-width: 1200px) {
+  
+  .App {
+    font-size: 32px;
+  }
+  
+  .Cell {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .Row:nth-child(3n) {
+    margin-bottom: 15px;
+  }
+  
+  .Cell:nth-child(3n) {
+    margin-right: 15px;
+  }
+  
+  .info {
+    margin-right: 10px;
+    width: 343px;
+    font-size: 36px;
+  }
+}
+
 /* media query menor a 650px */
 
 @media screen and (max-width: 650px) {
@@ -173,6 +202,7 @@
 .dark-mode {
   background-color: rgb(48, 48, 48);
   --primary-color: var(--purple);
+  padding-bottom: 200px;
 } 
 
 .dark-mode .Cell {
